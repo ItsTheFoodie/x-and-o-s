@@ -12,23 +12,22 @@
                  ["","",""]]
         console.table(board)
 
-        let p1 = prompt("Please input your move , Row first then Column")
+        let p1 = prompt("Player 1 : Please input your move , Row first then Column")
         let p2
-        if (p1[0]  >= 0 && p1[0] <= 2 && p1[length.p1-1] >= 0 && p1[length.p1-1] <= 2){
+        if (p1[0]  >= 0 && p1[0] <= 2 && p1[p1.length-1] >= 0 && p1[p1.length-1] <= 2){
             board[p1[0]] [p1[p1.length-1]] = "X"
             console.table(board);
-            p2 = prompt ("Please input a new move, Row first the Column")
-            if (p2[0]  >= 0 && p2[0] <= 2 && p2[length.p2-1] >= 0 && p2[length.p2-1] <= 2) {
+          
+        } else{
+            console.log("It seems that there have been an error. Please make sure to input numbers between 0 and 2!")
+        }
+        
+        p2 = prompt ("Player 2 : input a new move, Row first the Column")
+            if (p2[0]  >= 0 && p2[0] <= 2 && p2[p2.length-1] >= 0 && p2[p2.length-1] <= 2) {
                 board [p2[0]] [p2[p2.length-1]] = "O"
                 console.table(board);
             }else{
                 console.log("It seems that there have been an error. Please make sure to input numbers between 0 and 2!")
             }
-        } else{
-            console.log("It seems that there have been an error. Please make sure to input numbers between 0 and 2!")
-            let p1 = prompt("Please input your move , Row first then Column")
-        }
-  
     </script>
 </body>
-</html>
