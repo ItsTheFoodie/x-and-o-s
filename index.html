@@ -7,14 +7,24 @@
     <script src="https://cdn.jsdelivr.net/npm/p5@1.11.5/lib/p5.min.js"></script>
 </head>
 <body>
+       
     <script>
+
+            
+    function setup(){
+        createCanvas(900,900)
+        background("black")
+        let button = createCanvas ('click Me!!!!')
+        button.position(0,0)
+
+
+    }
     let board = [["", "",""],
                  ["","",""],
                  ["","",""]]
         console.table(board)
-        while (true){
+        //while (true){
             let p1 = prompt("Player 1 : Please input your move , Row first then Column")
-             p2
             if (p1[0]  >= 0 && p1[0] <= 2 && p1[p1.length-1] >= 0 && p1[p1.length-1] <= 2){
                 board[p1[0]] [p1[p1.length-1]] = "X"
                 console.table(board);
@@ -30,14 +40,12 @@
                 }else{
                     console.log("It seems that there have been an error. Please make sure to input numbers between 0 and 2!")
                 }
-        }
+        //}
 
 
-        //here is the start of our p5.js
+        
 
-        function setup(){
-            createCanvas(900,900)
-            background("black")
-        }
+        
+     
     </script>
 </body>
