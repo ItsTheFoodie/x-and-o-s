@@ -9,21 +9,34 @@
 <body>
        
     <script>
-
-            
-    function setup(){
-        createCanvas(900,900)
-        background("black")
-        let button = createButton (' ')
-        button.position(0,0)
-        button.style('width:300px; height:300px')
-
-
-    }
+    let button =[]
     let board = [["", "",""],
                  ["","",""],
                  ["","",""]]
         console.table(board)
+
+    function setup(){
+        createCanvas(900,900)
+        background("black")
+        for (i=0; i<9; i++){
+            button[i] = createButton (' ')
+            button[i].style('width:300px; height:300px')
+        }
+        //first row
+        button[0].position(0,0)
+        button[1].position(300,0)
+        button[2].position(600,0)
+        //second row
+        button[3].position(0,300)
+        button[4].position(300,300)
+        button[5].position(600,300)
+        //third row
+        button[6].position(0,600)
+        button[7].position(300,600)
+        button[8].position(600,600)
+        
+
+    }    
         //while (true){
             let p1 = prompt("Player 1 : Please input your move , Row first then Column")
             if (p1[0]  >= 0 && p1[0] <= 2 && p1[p1.length-1] >= 0 && p1[p1.length-1] <= 2){
