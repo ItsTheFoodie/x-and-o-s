@@ -1,6 +1,7 @@
 # x-and-o-s
 x and o's
-
+## HOMEWORK 5/25
+- Get all buttons to hide when double clicked
 ## HOMEWORK 4/27:
  - Research button elements in p5.js: https://p5js.org/reference/p5/createButton/
  - update your repository to include the p5.js library
