@@ -9,7 +9,7 @@
 <body>
        
     <script>
-    let button =[]
+    let button=[]
     let board = [["", "",""],
                  ["","",""],
                  ["","",""]]
@@ -33,10 +33,13 @@
         //third row
         button[6].position(0,600)
         button[7].position(300,600)
-        button[8].position(600,600)
-        
+        button[8].position(600,600)     
 
     }    
+
+    function doubleClicked() {
+        button[2].hide();
+    }
         //while (true){
             let p1 = prompt("Player 1 : Please input your move , Row first then Column")
             if (p1[0]  >= 0 && p1[0] <= 2 && p1[p1.length-1] >= 0 && p1[p1.length-1] <= 2){
