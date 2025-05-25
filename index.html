@@ -37,8 +37,12 @@
 
     }    
 
+
     function doubleClicked() {
-        button[2].hide();
+        console.log(mouseX,mouseY)
+        if(mouseX > 0 && mouseX < 300 && mouseY > 0 && mouseY < 300) {
+            button[0].hide();
+        }
     }
         //while (true){
             let p1 = prompt("Player 1 : Please input your move , Row first then Column")
