@@ -1,5 +1,9 @@
 # x-and-o-s
+
 x and o's
+## HOMEWORK 6/01
+-adding x or o's
+
 ## HOMEWORK 5/25
 - Get all buttons to hide when double clicked
 ## HOMEWORK 4/27:
