@@ -40,6 +40,7 @@
 
     function doubleClicked() {
         console.log(mouseX,mouseY)
+        //first row
         if(mouseX > 0 && mouseX < 300 && mouseY > 0 && mouseY < 300) {
             button[0].hide();
         }else if(mouseX > 300 && mouseX < 600 && mouseY > 0 && mouseY < 300) {
@@ -47,6 +48,20 @@
         }else if(mouseX > 600 && mouseX < 900 && mouseY > 0 && mouseY < 300) {
             button[2].hide();
         }
+        //second row
+        else if(mouseX > 0 && mouseX < 300 && mouseY > 300 && mouseY < 600) {
+            button[3].hide();
+        }else if(mouseX > 300 && mouseX < 600 && mouseY > 300 && mouseY < 600) {
+            button[4].hide();
+        }else if(mouseX > 600 && mouseX < 900 && mouseY > 300 && mouseY < 600) {
+            button[5].hide();
+        }
+        //third row
+        else if(mouseX > 0 && mouseX < 300 && mouseY > 600 && mouseY < 900) {
+            button[6].hide();
+        } else if(mouseX > 300 && mouseX < 600 && mouseY > 600 && mouseY < 900) {
+            button[7].hide();
+        } 
     }
         //while (true){
             let p1 = prompt("Player 1 : Please input your move , Row first then Column")
