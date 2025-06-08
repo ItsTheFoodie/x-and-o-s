@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/p5@1.11.5/lib/p5.min.js"></script>
 </head>
 <body>
@@ -49,6 +50,7 @@
         if(mouseX > 0 && mouseX < 300 && mouseY > 0 && mouseY < 300) {
             button[0].hide();
              text(tracker,150,150);
+             board[0][0] = tracker
         }else if(mouseX > 300 && mouseX < 600 && mouseY > 0 && mouseY < 300) {
             button[1].hide();
              text(tracker, 450, 150);
@@ -84,6 +86,7 @@
         }else {
             tracker = "X"
         }
+        console.table(board);
     } 
 
         //while (true){
