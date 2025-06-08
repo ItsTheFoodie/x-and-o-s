@@ -9,6 +9,8 @@
 <body>
        
     <script>
+    let tracker = "X"
+    let counter = 1;
     let button=[]
     let board = [["", "",""],
                  ["","",""],
@@ -46,37 +48,44 @@
         //first row
         if(mouseX > 0 && mouseX < 300 && mouseY > 0 && mouseY < 300) {
             button[0].hide();
-             text("X", 150,150);
+             text(tracker,150,150);
         }else if(mouseX > 300 && mouseX < 600 && mouseY > 0 && mouseY < 300) {
             button[1].hide();
-             text("X", 450, 150);
+             text(tracker, 450, 150);
         }else if(mouseX > 600 && mouseX < 900 && mouseY > 0 && mouseY < 300) {
             button[2].hide();
-             text("X", 750, 150);
+             text(tracker, 750, 150);
         }
         //second row
         else if(mouseX > 0 && mouseX < 300 && mouseY > 300 && mouseY < 600) {
             button[3].hide();
-            text("X", 150, 450);
+            text(tracker, 150, 450);
             
         }else if(mouseX > 300 && mouseX < 600 && mouseY > 300 && mouseY < 600) {
             button[4].hide();
-             text("X", 450, 450);
+             text(tracker, 450, 450);
         }else if(mouseX > 600 && mouseX < 900 && mouseY > 300 && mouseY < 600) {
             button[5].hide();
-             text("X", 750, 450);
+             text(tracker, 750, 450);
         }
         //third row
         else if(mouseX > 0 && mouseX < 300 && mouseY > 600 && mouseY < 900) {
             button[6].hide();
-             text("X", 150, 750);
+             text(tracker, 150, 750);
         } else if(mouseX > 300 && mouseX < 600 && mouseY > 600 && mouseY < 900) {
             button[7].hide();
-             text("X", 450, 750);
+             text(tracker, 450, 750);
         } else {button[8].hide()
-             text("X", 750, 750);
+             text(tracker, 750, 750);
         }
-    }
+        counter++
+        if (counter%2 == 0){
+            tracker = "O"
+        }else {
+            tracker = "X"
+        }
+    } 
+
         //while (true){
             // let p1 = prompt("Player 1 : Please input your move , Row first then Column")
             // if (p1[0]  >= 0 && p1[0] <= 2 && p1[p1.length-1] >= 0 && p1[p1.length-1] <= 2){
