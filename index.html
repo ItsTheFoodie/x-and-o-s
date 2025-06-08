@@ -18,6 +18,9 @@
     function setup(){
         createCanvas(900,900)
         background("black")
+        fill("white");
+        textSize(300);
+        textAlign(CENTER,CENTER)
         for (i=0; i<9; i++){
             button[i] = createButton (' ')
             button[i].style('width:300px; height:300px')
@@ -43,43 +46,54 @@
         //first row
         if(mouseX > 0 && mouseX < 300 && mouseY > 0 && mouseY < 300) {
             button[0].hide();
+             text("X", 150,150);
         }else if(mouseX > 300 && mouseX < 600 && mouseY > 0 && mouseY < 300) {
             button[1].hide();
+             text("X", 450, 150);
         }else if(mouseX > 600 && mouseX < 900 && mouseY > 0 && mouseY < 300) {
             button[2].hide();
+             text("X", 750, 150);
         }
         //second row
         else if(mouseX > 0 && mouseX < 300 && mouseY > 300 && mouseY < 600) {
             button[3].hide();
+            text("X", 150, 450);
+            
         }else if(mouseX > 300 && mouseX < 600 && mouseY > 300 && mouseY < 600) {
             button[4].hide();
+             text("X", 450, 450);
         }else if(mouseX > 600 && mouseX < 900 && mouseY > 300 && mouseY < 600) {
             button[5].hide();
+             text("X", 750, 450);
         }
         //third row
         else if(mouseX > 0 && mouseX < 300 && mouseY > 600 && mouseY < 900) {
             button[6].hide();
+             text("X", 150, 750);
         } else if(mouseX > 300 && mouseX < 600 && mouseY > 600 && mouseY < 900) {
             button[7].hide();
-        } 
+             text("X", 450, 750);
+        } else {button[8].hide()
+             text("X", 750, 750);
+        }
     }
         //while (true){
-            let p1 = prompt("Player 1 : Please input your move , Row first then Column")
-            if (p1[0]  >= 0 && p1[0] <= 2 && p1[p1.length-1] >= 0 && p1[p1.length-1] <= 2){
-                board[p1[0]] [p1[p1.length-1]] = "X"
-                console.table(board);
+            // let p1 = prompt("Player 1 : Please input your move , Row first then Column")
+            // if (p1[0]  >= 0 && p1[0] <= 2 && p1[p1.length-1] >= 0 && p1[p1.length-1] <= 2){
+            //     board[p1[0]] [p1[p1.length-1]] = "X"
+            //     console.table(board);
           
-            } else{
-                console.log("It seems that there have been an error. Please make sure to input numbers between 0 and 2!")
-            }
+            // } else{
+            //     console.log("It seems that there have been an error. Please make sure to input numbers between 0 and 2!")
+            // }
         
-            p2 = prompt ("Player 2 : input a new move, Row first the Column")
-                if (p2[0]  >= 0 && p2[0] <= 2 && p2[p2.length-1] >= 0 && p2[p2.length-1] <= 2) {
-                    board[p2[0]] [p2[p2.length-1]] = "O"
-                    console.table(board);
-                }else{
-                    console.log("It seems that there have been an error. Please make sure to input numbers between 0 and 2!")
-                }
+            // p2 = prompt ("Player 2 : input a new move, Row first the Column")
+            //     if (p2[0]  >= 0 && p2[0] <= 2 && p2[p2.length-1] >= 0 && p2[p2.length-1] <= 2) {
+            //         board[p2[0]] [p2[p2.length-1]] = "O"
+            //         console.table(board);
+            //     }else{
+            //         console.log("It seems that there have been an error. Please make sure to input numbers between 0 and 2!")
+                //}
         //}
 
 
