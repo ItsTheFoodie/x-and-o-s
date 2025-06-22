@@ -1,3 +1,13 @@
 body {
     background-color:rgb(58, 224, 152) ;
+    background-image: url("seamless aesthetic plant pic.jpg");
+    background-size:  700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nice{
+    width: 900px;
+    height: 900px;
 }

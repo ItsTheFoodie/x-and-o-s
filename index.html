@@ -8,8 +8,10 @@
     <script src="https://cdn.jsdelivr.net/npm/p5@1.11.5/lib/p5.min.js"></script>
 </head>
 <body>
+    <div id="nice"></div>
        
     <script>
+    let cnv;
     let tracker = "X"
     let counter = 1;
     let button=[]
@@ -19,19 +21,24 @@
         console.table(board)
 
     function setup(){
-        createCanvas(900,900)
+       cnv = createCanvas(900,900)
+       cnv.parent("nice");
+       let newCanvasX = (windowWidth-900)/2
+       let newCanvasY = (windowHeight-900)/2
+       cnv.position(newCanvasX,newCanvasY)
         background("black")
         fill("white");
         textSize(300);
         textAlign(CENTER,CENTER)
         for (i=0; i<9; i++){
             button[i] = createButton (' ')
+            button[i].parent("nice");
             button[i].style('width:300px; height:300px')
         }
         //first row
-        button[0].position(0,0)
-        button[1].position(300,0)
-        button[2].position(600,0)
+        button[0].position(0,0,"relative")
+        button[1].position(300,0,"relative")
+        button[2].position(600,0,"relative")
         //second row
         button[3].position(0,300)
         button[4].position(300,300)
