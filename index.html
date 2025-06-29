@@ -23,10 +23,7 @@
     function setup(){
        cnv = createCanvas(900,900)
        cnv.parent("nice");
-       let newCanvasX = (windowWidth-900)/2
-       let newCanvasY = (windowHeight-900)/2
-       cnv.position(newCanvasX,newCanvasY)
-        background("black")
+        background("DarkSeaGreen")
         fill("white");
         textSize(300);
         textAlign(CENTER,CENTER)
@@ -36,9 +33,9 @@
             button[i].style('width:300px; height:300px')
         }
         //first row
-        button[0].position(0,0,"relative")
-        button[1].position(300,0,"relative")
-        button[2].position(600,0,"relative")
+        button[0].position(0,0)
+        button[1].position(300,0)
+        button[2].position(600,0)
         //second row
         button[3].position(0,300)
         button[4].position(300,300)
@@ -56,8 +53,12 @@
         //first row
         if(mouseX > 0 && mouseX < 300 && mouseY > 0 && mouseY < 300) {
             button[0].hide();
+            if (board[0][0] == "") {
              text(tracker,150,150);
              board[0][0] = tracker
+            }else{
+                alert("Bad move! Lost your turn 😂")
+            }
         }else if(mouseX > 300 && mouseX < 600 && mouseY > 0 && mouseY < 300) {
             button[1].hide();
              text(tracker, 450, 150);

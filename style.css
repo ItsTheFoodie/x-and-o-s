@@ -9,5 +9,8 @@ body {
 
 #nice{
     width: 900px;
-    height: 900px;
+    height: 900px; 
+    position:absolute;
+    top: calc(50% - 450px);
+    left: calc(50% - 450px)
 }
