@@ -1,5 +1,7 @@
 # x-and-o-s
 
+# practice making a pull request....
+
 x and o's
 ## HOMEWORK 6/01
 -adding x or o's
