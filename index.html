@@ -61,32 +61,73 @@
             }
         }else if(mouseX > 300 && mouseX < 600 && mouseY > 0 && mouseY < 300) {
             button[1].hide();
+            if (board[0][1] == ""){
              text(tracker, 450, 150);
+             board[0][1] = tracker
+            }else{ 
+                alert("Bad move! Lost your turn 😂")
+            }
         }else if(mouseX > 600 && mouseX < 900 && mouseY > 0 && mouseY < 300) {
             button[2].hide();
+            if (board[0][2] == ""){
              text(tracker, 750, 150);
+             board [0][2] = tracker
+            }else{
+                 alert("Bad move! Lost your turn 😂")
+            }
         }
         //second row
         else if(mouseX > 0 && mouseX < 300 && mouseY > 300 && mouseY < 600) {
             button[3].hide();
-            text(tracker, 150, 450);
+            if (board[1][0] == ""){
+             text(tracker, 150, 450);
+             board[1][0] = tracker
+            }else{
+                 alert("Bad move! Lost your turn 😂")
+            }
             
         }else if(mouseX > 300 && mouseX < 600 && mouseY > 300 && mouseY < 600) {
             button[4].hide();
+            if (board[1][1] = tracker){
              text(tracker, 450, 450);
+             board[1][1] = tracker
+            }else{
+                 alert("Bad move! Lost your turn 😂")
+            }
         }else if(mouseX > 600 && mouseX < 900 && mouseY > 300 && mouseY < 600) {
             button[5].hide();
+            if(board[1][2] == ""){
              text(tracker, 750, 450);
+             board[1][2] = tracker
+            }else{
+                 alert("Bad move! Lost your turn 😂")
+            }
         }
         //third row
         else if(mouseX > 0 && mouseX < 300 && mouseY > 600 && mouseY < 900) {
             button[6].hide();
+            if(board[2][0] == ""){
              text(tracker, 150, 750);
+             board[2][0] = tracker
+            }else{
+                 alert("Bad move! Lost your turn 😂")
+            }
         } else if(mouseX > 300 && mouseX < 600 && mouseY > 600 && mouseY < 900) {
             button[7].hide();
+            if(button[2][1] == ""){
              text(tracker, 450, 750);
-        } else {button[8].hide()
+             button[2][1] = tracker
+            }else{
+                 alert("Bad move! Lost your turn 😂")
+            }
+        } else {
+            button[8].hide()
+            if(button[2][2] == ""){
              text(tracker, 750, 750);
+             button[2][2] = tracker
+            }else{
+                 alert("Bad move! Lost your turn 😂")
+            }
         }
         counter++
         if (counter%2 == 0){
@@ -95,26 +136,12 @@
             tracker = "X"
         }
         console.table(board);
-    } 
-
-        //while (true){
-            // let p1 = prompt("Player 1 : Please input your move , Row first then Column")
-            // if (p1[0]  >= 0 && p1[0] <= 2 && p1[p1.length-1] >= 0 && p1[p1.length-1] <= 2){
-            //     board[p1[0]] [p1[p1.length-1]] = "X"
-            //     console.table(board);
-          
-            // } else{
-            //     console.log("It seems that there have been an error. Please make sure to input numbers between 0 and 2!")
-            // }
-        
-            // p2 = prompt ("Player 2 : input a new move, Row first the Column")
-            //     if (p2[0]  >= 0 && p2[0] <= 2 && p2[p2.length-1] >= 0 && p2[p2.length-1] <= 2) {
-            //         board[p2[0]] [p2[p2.length-1]] = "O"
-            //         console.table(board);
-            //     }else{
-            //         console.log("It seems that there have been an error. Please make sure to input numbers between 0 and 2!")
-                //}
-        //}
+        if(board[0][0] != ""){
+            if(board[0][0] == board[0][1] && board[0][1] == board[0][2]){
+                alert("WINNER")
+            }
+        }
+    }
 
 
         
