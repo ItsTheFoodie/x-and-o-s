@@ -1,4 +1,6 @@
 # x-and-o-s
+## HOMEWORK 7/06
+-adding winning logic for second row
 
 # practice making a pull request....
 
