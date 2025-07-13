@@ -48,7 +48,7 @@
     }    
 
 
-    function doubleClicked() {
+    function mouseClicked() {
         console.log(mouseX,mouseY)
         //first row
         if(mouseX > 0 && mouseX < 300 && mouseY > 0 && mouseY < 300) {
@@ -88,7 +88,7 @@
             
         }else if(mouseX > 300 && mouseX < 600 && mouseY > 300 && mouseY < 600) {
             button[4].hide();
-            if (board[1][1] = tracker){
+            if (board[1][1] == ""){
              text(tracker, 450, 450);
              board[1][1] = tracker
             }else{
@@ -114,17 +114,17 @@
             }
         } else if(mouseX > 300 && mouseX < 600 && mouseY > 600 && mouseY < 900) {
             button[7].hide();
-            if(button[2][1] == ""){
+            if(board[2][1] == ""){
              text(tracker, 450, 750);
-             button[2][1] = tracker
+             board[2][1] = tracker
             }else{
                  alert("Bad move! Lost your turn 😂")
             }
         } else {
             button[8].hide()
-            if(button[2][2] == ""){
+            if(board[2][2] == ""){
              text(tracker, 750, 750);
-             button[2][2] = tracker
+             board[2][2] = tracker
             }else{
                  alert("Bad move! Lost your turn 😂")
             }
@@ -136,11 +136,57 @@
             tracker = "X"
         }
         console.table(board);
+        //rows
         if(board[0][0] != ""){
             if(board[0][0] == board[0][1] && board[0][1] == board[0][2]){
                 alert("WINNER")
             }
         }
+        if(board[1][0] != ""){
+            if(board[1][0] == board[1][1] && board[1][1] == board[1][2]){
+                alert("WINNER")
+            }
+        }
+        if(board[2][0] != ""){
+            if(board[2][0] == board[2][1] && board[2][1] == board[2][2]){
+                alert("WINNER")
+            }
+        }
+        //columns
+        if(board[0][0] != ""){
+            if(board[0][0] == board[1][0] && board[1][0] == board[2][0]){
+                alert("WINNER")
+            }
+        }
+
+        if(board[0][1] != ""){
+            if(board[0][1] == board[1][1] && board[1][1] == board[2][1]){
+                alert("WINNER")
+            }
+        }
+        if(board[0][2] != ""){
+            if(board[0][2] == board[1][2] && board[1][2] == board[2][2]){
+                alert("WINNER")
+            }
+        } 
+
+        //diagonals
+
+        if(board[0][0] != ""){
+            if(board[0][0] == board[1][1] && board[1][1] == board[2][2]){
+                alert("WINNER")
+            }
+        }
+
+        if(board[0][2] != ""){
+            if(board[0][2] == board[1][1] && board[1][1] == board[2][0]){
+                alert("WINNER")
+            }
+        }
+
+
+
+
     }
 
 
